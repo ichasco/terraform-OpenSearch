@@ -35,7 +35,8 @@ resource "aws_opensearch_domain" "logs" {
   }
 
   auto_tune_options {
-    desired_state = "ENABLED"
+    desired_state       = "ENABLED"
+    rollback_on_disable = "NO_ROLLBACK"
   }
 
   ebs_options {
